@@ -8,6 +8,7 @@ def reverse_words(text):
 
 def main():
     print("Welcome to the Text Reverser!")
+    
     while True:
         print("\nChoose an option:")
         print("1. Reverse Character Order")
@@ -18,16 +19,22 @@ def main():
         
         if choice == "1":
             text = input("Enter text to reverse: ").strip()
-            print("Reversed Text:", reverse_characters(text))
-        
+            if text:
+                print("Reversed Text:", reverse_characters(text))
+            else:
+                print("Error: Input cannot be empty!")
+
         elif choice == "2":
             text = input("Enter text to reverse word order: ").strip()
-            print("Reversed Text:", reverse_words(text))
-        
+            if text:
+                print("Reversed Text:", reverse_words(text))
+            else:
+                print("Error: Input cannot be empty!")
+
         elif choice == "3":
             print("Exiting... Thank you!")
             break
-        
+
         else:
             print("Invalid choice! Please select 1, 2, or 3.")
 
