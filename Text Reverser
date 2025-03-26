@@ -1,0 +1,35 @@
+def reverse_characters(text):
+    """Reverses the entire text character by character."""
+    return text[::-1]
+
+def reverse_words(text):
+    """Reverses the order of words in the text while keeping words intact."""
+    return " ".join(text.split()[::-1])
+
+def main():
+    print("Welcome to the Text Reverser!")
+    while True:
+        print("\nChoose an option:")
+        print("1. Reverse Character Order")
+        print("2. Reverse Word Order")
+        print("3. Exit")
+        
+        choice = input("Enter your choice (1/2/3): ").strip()
+        
+        if choice == "1":
+            text = input("Enter text to reverse: ").strip()
+            print("Reversed Text:", reverse_characters(text))
+        
+        elif choice == "2":
+            text = input("Enter text to reverse word order: ").strip()
+            print("Reversed Text:", reverse_words(text))
+        
+        elif choice == "3":
+            print("Exiting... Thank you!")
+            break
+        
+        else:
+            print("Invalid choice! Please select 1, 2, or 3.")
+
+if __name__ == "__main__":
+    main()
